@@ -24,18 +24,20 @@ class ViewController: UIViewController {
         skView.showsNodeCount = true
         
         //ビューと同じサイズでシーンを作成する
-        let scene = GameScene(size:skView.frame.size)
-        
+        //let scene = GameScene(size:skView.frame.size)
+        let scene = TitleScene(size:skView.frame.size)
+        //scene.scaleMode = .aspectFit    
         //ビューにシーンを表示する
         skView.presentScene(scene)
-    }
+
     
+
+    }
     //ステータスバーを消す
-    override var prefersStatusBarHidden: Bool{
+    override var prefersStatusBarHidden : Bool{
         get {
             return true
         }
     }
-
 }
 
